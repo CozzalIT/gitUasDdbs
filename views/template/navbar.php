@@ -21,7 +21,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <?php if (((Session::get('loggedIn') == true) || (Session::get('akses') == true)) && (Session::get('page') != 'regis')):?>
+            <?php if (Session::get('loggedIn') == true):?>
               <a class="nav-link" href="<?php echo URL; ?>dashboard/logout">
                 <i class="material-icons">reply</i> Logout
               </a>

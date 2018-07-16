@@ -11,36 +11,47 @@
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
-      <li class="nav-item <?php if (Session::get('page') == 'index') echo 'active';?> ">
-        <a class="nav-link" href="<?php echo URL; ?>index">
-          <i class="material-icons">dashboard</i>
-          <p>Main Page</p>
-        </a>
-      </li>
-      <li class="nav-item <?php if (Session::get('page') == 'member') echo 'active'; ?> ">
-        <a class="nav-link" href="<?php echo URL; ?>member">
-          <i class="material-icons">recent_actors</i>
-          <p>Member</p>
-        </a>
-      </li>
-      <li class="nav-item <?php if (Session::get('page') == 'peminjaman') echo 'active'; ?> ">
-        <a class="nav-link" href="<?php echo URL; ?>peminjaman">
-          <i class="material-icons">content_paste</i>
-          <p>Peminjaman</p>
-        </a>
-      </li>
-      <li class="nav-item <?php if (Session::get('page') == 'petugas') echo 'active'; ?> ">
-        <a class="nav-link" href="<?php echo URL; ?>petugas">
-          <i class="material-icons">supervisor_account</i>
-          <p>Petugas</p>
-        </a>
-      </li>
-      <li class="nav-item <?php if (Session::get('page') == 'cabang') echo 'active'; ?> ">
-        <a class="nav-link" href="<?php echo URL; ?>cabang">
-          <i class="material-icons">location_ons</i>
-          <p>Cabang</p>
-        </a>
-      </li>
+      <?php if (Session::get('loggedIn') == true):?>
+        <li class="nav-item <?php if (Session::get('page') == 'dashboard') echo 'active'; ?> ">
+          <a class="nav-link" href="<?php echo URL; ?>dashboard">
+            <i class="material-icons">dashboard</i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="nav-item <?php if (Session::get('page') == 'member') echo 'active'; ?> ">
+          <a class="nav-link" href="<?php echo URL; ?>member">
+            <i class="material-icons">recent_actors</i>
+            <p>Member</p>
+          </a>
+        </li>
+        <li class="nav-item <?php if (Session::get('page') == 'peminjaman') echo 'active'; ?> ">
+          <a class="nav-link" href="<?php echo URL; ?>peminjaman">
+            <i class="material-icons">content_paste</i>
+            <p>Peminjaman</p>
+          </a>
+        </li>
+        <li class="nav-item <?php if (Session::get('page') == 'petugas') echo 'active'; ?> ">
+          <a class="nav-link" href="<?php echo URL; ?>petugas">
+            <i class="material-icons">supervisor_account</i>
+            <p>Petugas</p>
+          </a>
+        </li>
+        <?php if (Session::get('idCabang') == null): ?>
+          <li class="nav-item <?php if (Session::get('page') == 'cabang') echo 'active'; ?> ">
+            <a class="nav-link" href="<?php echo URL; ?>cabang">
+              <i class="material-icons">location_ons</i>
+              <p>Cabang <?php echo Session::get('idCabang'); ?></p>
+            </a>
+          </li>
+        <?php endif; ?>
+      <?php else: ?>
+        <li class="nav-item <?php if (Session::get('page') == 'index') echo 'active';?> ">
+          <a class="nav-link" href="<?php echo URL; ?>index">
+            <i class="material-icons">dashboard</i>
+            <p>Main Page</p>
+          </a>
+        </li>
+      <?php endif; ?>
       <!-- your sidebar here -->
     </ul>
   </div>

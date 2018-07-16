@@ -5,8 +5,8 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header card-header-primary">
-        <h4 class="card-title ">Data Peserta</h4>
-        <p class="card-category"> Demi kerahasiaan hasil vote, no register tidak ditampilkan</p>
+        <h4 class="card-title ">Data Member</h4>
+        <p class="card-category"> .. </p>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -29,20 +29,13 @@
               </th>
             </thead>
             <tbody>
-              <?php
-                $i = 1;
-                foreach ($this->show as $key => $value) {
-                  echo '
-                  <tr>
-                    <td>'.$i.'</td>
-                    <td>'.$value['nama'].'</td>
-                    <td>'.$value['status'].'</td>
-                    <td>'.$value['kelas'].'</td>
-                    <td class="text-primary">'.$value['noTelpon'].'</td>
-                  </tr>';
-                  $i++;
-                }
-              ?>
+              <tr>
+                <td>1</td>
+                <td>Farhan</td>
+                <td>----</td>
+                <td>----</td>
+                <td class="text-primary">-----</td>
+              </tr>';
             </tbody>
           </table>
         </div>

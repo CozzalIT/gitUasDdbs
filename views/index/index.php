@@ -1,6 +1,13 @@
 
   Source : index/index.php
   <br />
+  <?php
+    Session::init();
+    $logged = Session::get('loggedIn');
+    if ($logged == true){
+      echo "berhasil login";
+    }
+  ?>
   <br />
   <br />
   <div class="row">

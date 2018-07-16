@@ -9,6 +9,7 @@
     function __construct()
     {
       parent::__construct();
+      Session::init();
     }
 
     function index()
