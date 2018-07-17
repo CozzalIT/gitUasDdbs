@@ -15,7 +15,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#messages" data-toggle="tab">
                   <i class="material-icons">note_add</i> Tambah Data
-                  <div class="ripple-container"></div>
+                  <div class="ripple-container"> </div>
                 </a>
               </li>
             </ul>
