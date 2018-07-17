@@ -2,44 +2,60 @@
 <hr />
 <!-- Tabel data peserta -->
 <div class="row">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header card-header-primary">
-        <h4 class="card-title ">Data Member</h4>
-        <p class="card-category"> .. </p>
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-success">
+        <div class="ct-chart" id="dailySalesChart"></div>
       </div>
       <div class="card-body">
-        <div class="table-responsive">
-          <table class="table data">
-            <thead class=" text-primary">
-              <th>
-                NO
-              </th>
-              <th>
-                Nama
-              </th>
-              <th>
-                Status
-              </th>
-              <th>
-                Kelas/Asal
-              </th>
-              <th>
-                No Telpon
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Farhan</td>
-                <td>----</td>
-                <td>----</td>
-                <td class="text-primary">-----</td>
-              </tr>';
-            </tbody>
-          </table>
+        <h4 class="card-title">Daily Sales</h4>
+        <p class="card-category">
+          <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> updated 4 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-warning">
+        <div class="ct-chart" id="websiteViewsChart"></div>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Email Subscriptions</h4>
+        <p class="card-category">Last Campaign Performance</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> campaign sent 2 days ago
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-danger">
+        <div class="ct-chart" id="completedTasksChart"></div>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Completed Tasks</h4>
+        <p class="card-category">Last Campaign Performance</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> campaign sent 2 days ago
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function() {
+    // Javascript method's body can be found in assets/js/demos.js
+    md.initDashboardPageCharts();
+
+  });
+</script>

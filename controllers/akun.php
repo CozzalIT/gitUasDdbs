@@ -3,7 +3,7 @@
 /**
  *
  */
-class Petugas extends Controller
+class Akun extends Controller
 {
 
   function __construct()
@@ -16,17 +16,17 @@ class Petugas extends Controller
       header('location: '.URL.'index');
       exit;
     }
-    Session::set('page', 'petugas');
+    Session::set('page', 'akun');
   }
 
   function index()
   {
-    $this->view->render('petugas/index');
+    $this->view->render('akun/index');
   }
 
   function edit()
   {
-    $this->view->render('petugas/edit');
+    $this->view->render('akun/edit');
   }
 }
 

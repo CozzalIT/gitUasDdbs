@@ -24,6 +24,12 @@
             <p>Member</p>
           </a>
         </li>
+        <li class="nav-item <?php if (Session::get('page') == 'buku') echo 'active'; ?> ">
+          <a class="nav-link" href="<?php echo URL; ?>buku">
+            <i class="material-icons">book</i>
+            <p>buku</p>
+          </a>
+        </li>
         <li class="nav-item <?php if (Session::get('page') == 'peminjaman') echo 'active'; ?> ">
           <a class="nav-link" href="<?php echo URL; ?>peminjaman">
             <i class="material-icons">content_paste</i>
@@ -37,10 +43,16 @@
           </a>
         </li>
         <?php if (Session::get('idCabang') == null): ?>
+          <li class="nav-item <?php if (Session::get('page') == 'akun') echo 'active'; ?> ">
+            <a class="nav-link" href="<?php echo URL; ?>akun">
+              <i class="material-icons">person</i>
+              <p>Pengaturan Akun</p>
+            </a>
+          </li>
           <li class="nav-item <?php if (Session::get('page') == 'cabang') echo 'active'; ?> ">
             <a class="nav-link" href="<?php echo URL; ?>cabang">
               <i class="material-icons">location_ons</i>
-              <p>Cabang <?php echo Session::get('idCabang'); ?></p>
+              <p>Cabang</p>
             </a>
           </li>
         <?php endif; ?>

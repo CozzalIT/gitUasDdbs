@@ -3,7 +3,7 @@
 /**
  *
  */
-class Petugas extends Controller
+class Buku extends Controller
 {
 
   function __construct()
@@ -16,17 +16,28 @@ class Petugas extends Controller
       header('location: '.URL.'index');
       exit;
     }
-    Session::set('page', 'petugas');
+    Session::set('page', 'buku');
   }
 
   function index()
   {
-    $this->view->render('petugas/index');
+    $this->view->show = $this->model->show();
+    $this->view->render('buku/index');
+  }
+
+  function show()
+  {
+    $this->model->show();
+  }
+
+  function add()
+  {
+    $this->model->add();
   }
 
   function edit()
   {
-    $this->view->render('petugas/edit');
+    $this->view->render('buku/edit');
   }
 }
 
